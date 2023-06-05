@@ -1,0 +1,19 @@
+template:
+  name: stage_repo2_featurebranch
+  identifier: stage_repo2_featurebranch
+  versionLabel: v9
+  type: Stage
+  projectIdentifier: Eric
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: Wait
+              name: Wait_1
+              identifier: Wait_1
+              spec:
+                duration: <+input>

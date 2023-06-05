@@ -1,0 +1,46 @@
+template:
+  name: stage_repo2_defaultbranch
+  identifier: stage_repo2_defaultbranch
+  versionLabel: v7
+  type: Stage
+  projectIdentifier: Eric
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              type: CustomApproval
+              name: customstep1
+              identifier: customstep1
+              timeout: 1d
+              spec:
+                shell: Bash
+                retryInterval: 10s
+                scriptTimeout: 10m
+                source:
+                  type: Inline
+                  spec:
+                    script: <+input>
+                environmentVariables: []
+                approvalCriteria:
+                  type: KeyValues
+                  spec:
+                    matchAnyCondition: false
+                    conditions:
+                      - key: status
+                        operator: equals
+                        value: todo
+                rejectionCriteria:
+                  type: KeyValues
+                  spec:
+                    matchAnyCondition: false
+                    conditions: []
+                delegateSelectors: []
+                onDelegate: true
+                outputVariables:
+                  - name: var1
+                    type: String
+                    value: abc

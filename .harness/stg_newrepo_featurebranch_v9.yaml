@@ -1,0 +1,25 @@
+template:
+  name: stg_newrepo_featurebranch
+  identifier: stg_newrepo_featurebranch
+  versionLabel: v9
+  type: Stage
+  projectIdentifier: defaultproject
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: Http
+              name: Http_1
+              identifier: Http_1
+              timeout: 10s
+              spec:
+                url: <+input>
+                method: GET
+                headers: []
+                inputVariables: []
+                outputVariables: []
+                requestBody: frtgh

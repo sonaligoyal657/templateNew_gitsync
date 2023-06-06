@@ -1,0 +1,19 @@
+template:
+  name: stage4_repoB_featureBranch
+  identifier: stage4_repoB_featureBranch
+  versionLabel: v5
+  type: Stage
+  projectIdentifier: defaultproject
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: Wait
+              name: Wait_1
+              identifier: Wait_1
+              spec:
+                duration: 10m

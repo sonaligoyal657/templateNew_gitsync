@@ -1,0 +1,25 @@
+pipeline:
+  name: edws
+  identifier: edws
+  template:
+    templateRef: p1_r1_default
+    versionLabel: frd
+    templateInputs:
+      stages:
+        - stage:
+            identifier: stg1_r1_fetaure
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: step1
+                          type: HarnessApproval
+                          spec:
+                            approvers:
+                              userGroups: <+input>
+  tags: {}
+  projectIdentifier: Eric
+  orgIdentifier: default

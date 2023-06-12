@@ -1,0 +1,25 @@
+inputSet:
+  name: inp1
+  identifier: inp1
+  orgIdentifier: default
+  projectIdentifier: Eric
+  pipeline:
+    identifier: edws
+    template:
+      templateInputs:
+        stages:
+          - stage:
+              identifier: stg1_r1_fetaure
+              template:
+                templateInputs:
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: step1
+                            type: HarnessApproval
+                            spec:
+                              approvers:
+                                userGroups:
+                                  - account._account_all_users

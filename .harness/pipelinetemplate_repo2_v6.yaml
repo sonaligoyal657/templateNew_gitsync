@@ -20,3 +20,9 @@ template:
           template:
             templateRef: stageTemplate1
             versionLabel: v2
+      - stage:
+          name: STG2_DS
+          identifier: STG2_DS
+          template:
+            templateRef: stageTemplate1
+            versionLabel: v2

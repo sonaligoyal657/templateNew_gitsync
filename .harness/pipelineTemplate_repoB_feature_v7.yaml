@@ -1,0 +1,25 @@
+template:
+  name: pipelineTemplate_repoB_feature
+  identifier: pipelineTemplate_repoB_feature
+  versionLabel: v7
+  type: Pipeline
+  projectIdentifier: Jira
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: fg
+          identifier: fg
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: Wait
+                    name: Wait_1
+                    identifier: Wait_1
+                    spec:
+                      duration: 10m
+          tags: {}

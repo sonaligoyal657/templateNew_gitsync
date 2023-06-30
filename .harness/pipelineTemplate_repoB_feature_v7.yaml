@@ -15,3 +15,25 @@ template:
             templateRef: sd
             versionLabel: fdc
             gitBranch: main_test
+      - stage:
+          name: fd
+          identifier: fd
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    name: samerepoe
+                    identifier: samerepoe
+                    template:
+                      templateRef: tgrf
+                      versionLabel: fg
+                      templateInputs:
+                        type: ShellScriptProvision
+                        spec:
+                          source:
+                            type: Inline
+                            spec:
+                              script: <+input>
+          tags: {}

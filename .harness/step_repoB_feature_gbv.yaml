@@ -1,0 +1,18 @@
+template:
+  name: step_repoB_feature
+  identifier: step_repoB_feature
+  versionLabel: gbv
+  type: Step
+  projectIdentifier: Jira
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: K8sScale
+    spec:
+      workload: frdes
+      skipSteadyStateCheck: false
+      instanceSelection:
+        type: Count
+        spec:
+          count: 1

@@ -1,0 +1,24 @@
+pipeline:
+  name: test2_pipeline
+  identifier: test2_pipeline
+  template:
+    templateRef: pipelineTemplateNBug
+    versionLabel: vbn
+    gitBranch: master
+    templateInputs:
+      stages:
+        - stage:
+            identifier: stg1
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: harness1
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          userGroups: <+input>
+  tags: {}
+  projectIdentifier: Jira
+  orgIdentifier: default

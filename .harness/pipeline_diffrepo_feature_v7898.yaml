@@ -1,0 +1,20 @@
+template:
+  name: pipeline_diffrepo_feature
+  identifier: pipeline_diffrepo_feature
+  versionLabel: v7898
+  type: Pipeline
+  projectIdentifier: Jira
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: stg1
+          identifier: stg1
+          template:
+            templateRef: stageTemplate_diffRepo_feature
+            versionLabel: v9879
+            templateInputs:
+              spec:
+                service:
+                  serviceInputs: <+input>

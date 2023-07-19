@@ -1,0 +1,20 @@
+template:
+  name: styeuwio
+  identifier: styeuwio
+  versionLabel: fdc
+  type: Stage
+  projectIdentifier: Jira
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: sd
+              identifier: sd
+              template:
+                templateRef: shell
+                versionLabel: cvbhgf
+                gitBranch: feature1

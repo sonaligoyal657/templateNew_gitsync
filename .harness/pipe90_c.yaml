@@ -30,3 +30,20 @@ template:
                                 type: Inline
                                 spec:
                                   script: <+input>
+      - stage:
+          name: d
+          identifier: d
+          template:
+            templateRef: account.stgtempgit
+            versionLabel: "1"
+            gitBranch: master
+            templateInputs:
+              type: Deployment
+              spec:
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  infrastructureDefinitions: <+input>

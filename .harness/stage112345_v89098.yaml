@@ -1,0 +1,27 @@
+template:
+  name: stage112345
+  identifier: stage112345
+  versionLabel: v89098
+  type: Stage
+  projectIdentifier: Jira
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: tep1
+              identifier: tep1
+              template:
+                templateRef: tgrf
+                versionLabel: fg
+                gitBranch: feature1
+                templateInputs:
+                  type: ShellScriptProvision
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>

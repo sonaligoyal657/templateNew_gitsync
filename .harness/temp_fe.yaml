@@ -2,25 +2,9 @@ pipeline:
   name: temp_fe
   identifier: temp_fe
   template:
-    templateRef: pipelineTemplateNBug
-    versionLabel: vbn
+    templateRef: pipelinetemplate_repo2
+    versionLabel: v6
     gitBranch: master
-    templateInputs:
-      stages:
-        - stage:
-            identifier: stg5678
-            template:
-              templateInputs:
-                type: Deployment
-                spec:
-                  service:
-                    serviceRef: <+input>
-                    serviceInputs: <+input>
-                  environment:
-                    environmentRef: <+input>
-                    environmentInputs: <+input>
-                    serviceOverrideInputs: <+input>
-                    infrastructureDefinitions: <+input>
   tags: {}
   projectIdentifier: Jira
   orgIdentifier: default

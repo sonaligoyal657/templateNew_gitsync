@@ -14,15 +14,54 @@ template:
           template:
             templateRef: stageTemplate1
             versionLabel: v2
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: step2
+                        template:
+                          templateInputs:
+                            type: Email
+                            spec:
+                              to: <+input>
+                              body: <+input>
       - stage:
           name: sdrty
           identifier: sdrty
           template:
             templateRef: stageTemplate1
             versionLabel: v2
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: step2
+                        template:
+                          templateInputs:
+                            type: Email
+                            spec:
+                              to: <+input>
+                              body: <+input>
       - stage:
           name: STG2_DS
           identifier: STG2_DS
           template:
             templateRef: stageTemplate1
             versionLabel: v2
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: step2
+                        template:
+                          templateInputs:
+                            type: Email
+                            spec:
+                              to: <+input>
+                              body: <+input>

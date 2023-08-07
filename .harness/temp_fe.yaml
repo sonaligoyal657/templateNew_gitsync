@@ -5,6 +5,56 @@ pipeline:
     templateRef: pipelinetemplate_repo2
     versionLabel: v6
     gitBranch: master
+    templateInputs:
+      stages:
+        - stage:
+            identifier: stg1
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: step2
+                          template:
+                            templateInputs:
+                              type: Email
+                              spec:
+                                to: <+input>
+                                body: <+input>
+        - stage:
+            identifier: sdrty
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: step2
+                          template:
+                            templateInputs:
+                              type: Email
+                              spec:
+                                to: <+input>
+                                body: <+input>
+        - stage:
+            identifier: STG2_DS
+            template:
+              templateInputs:
+                type: Approval
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: step2
+                          template:
+                            templateInputs:
+                              type: Email
+                              spec:
+                                to: <+input>
+                                body: <+input>
   tags: {}
   projectIdentifier: Jira
   orgIdentifier: default

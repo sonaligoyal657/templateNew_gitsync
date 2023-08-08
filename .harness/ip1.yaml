@@ -1,0 +1,58 @@
+inputSet:
+  name: ip1
+  identifier: ip1
+  orgIdentifier: default
+  projectIdentifier: Jira
+  pipeline:
+    identifier: temp_fe
+    template:
+      templateInputs:
+        stages:
+          - stage:
+              identifier: stg1
+              template:
+                templateInputs:
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: step2
+                            template:
+                              templateInputs:
+                                type: Email
+                                spec:
+                                  to: google.com
+                                  body: enter
+          - stage:
+              identifier: sdrty
+              template:
+                templateInputs:
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: step2
+                            template:
+                              templateInputs:
+                                type: Email
+                                spec:
+                                  to: www.health.com
+                                  body: test
+          - stage:
+              identifier: STG2_DS
+              template:
+                templateInputs:
+                  type: Approval
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: step2
+                            template:
+                              templateInputs:
+                                type: Email
+                                spec:
+                                  to: www.test.com
+                                  body: fd

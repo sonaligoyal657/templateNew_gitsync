@@ -1,5 +1,5 @@
 infrastructureDefinition:
-  name: infra789
+  name: infra5678
   identifier: infra6
   orgIdentifier: default
   projectIdentifier: InfraGitxTesting
@@ -8,6 +8,6 @@ infrastructureDefinition:
   type: KubernetesDirect
   spec:
     connectorRef: <+input>
-    namespace: <+input>
+    namespace: <+edxrtfyguhij>
     releaseName: release-<+INFRA_KEY_SHORT_ID>
   allowSimultaneousDeployments: false

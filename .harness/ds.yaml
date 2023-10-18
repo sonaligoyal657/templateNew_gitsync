@@ -1,0 +1,7 @@
+environment:
+  name: ds
+  identifier: ds
+  accountId: GiupuyeoSa6dNUgyrx0k3g
+  orgIdentifier: default
+  projectIdentifier: InfraGitxTesting
+  type: PreProduction

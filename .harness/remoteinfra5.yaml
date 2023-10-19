@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: remoteinfra5
+  identifier: remoteinfra5
+  orgIdentifier: default
+  projectIdentifier: InfragitxTesting
+  environmentRef: env1
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: <+input>
+    namespace: default
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false

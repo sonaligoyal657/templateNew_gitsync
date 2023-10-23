@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: fd
+  identifier: fd
+  orgIdentifier: default
+  projectIdentifier: TestInfraGitx
+  environmentRef: env1_remote
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: <+input>
+    namespace: fvcdsxza
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false

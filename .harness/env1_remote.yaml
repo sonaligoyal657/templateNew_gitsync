@@ -1,0 +1,7 @@
+environment:
+  name: env1_remote
+  identifier: env1_remote
+  accountId: qZ4zuEEHRrO7qGV_RtDYxg
+  orgIdentifier: default
+  projectIdentifier: TestInfraGitx
+  type: PreProduction

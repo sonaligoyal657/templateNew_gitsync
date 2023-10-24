@@ -16,7 +16,7 @@ service:
                   connectorRef: <+input>
                   gitFetchType: Branch
                   paths:
-                    - f
+                    - f12
                   branch: s
               skipResourceVersioning: false
               enableDeclarativeRollback: false

@@ -1,0 +1,5 @@
+service:
+  name: s1_newbranch
+  identifier: s1_newbranch
+  orgIdentifier: default
+  projectIdentifier: Jira

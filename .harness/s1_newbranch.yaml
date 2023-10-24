@@ -7,7 +7,7 @@ service:
     spec:
       manifests:
         - manifest:
-            identifier: m1
+            identifier: m112
             type: K8sManifest
             spec:
               store:

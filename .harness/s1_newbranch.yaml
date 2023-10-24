@@ -7,7 +7,7 @@ service:
     spec:
       manifests:
         - manifest:
-            identifier: manifest
+            identifier: manifestqwe
             type: K8sManifest
             spec:
               store:

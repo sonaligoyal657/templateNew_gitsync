@@ -3,3 +3,21 @@ service:
   identifier: s1_newbranch
   orgIdentifier: default
   projectIdentifier: Jira
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: m1
+            type: K8sManifest
+            spec:
+              store:
+                type: Git
+                spec:
+                  connectorRef: <+input>
+                  gitFetchType: Branch
+                  paths:
+                    - f
+                  branch: s
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+    type: Kubernetes

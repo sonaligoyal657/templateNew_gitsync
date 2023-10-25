@@ -1,6 +1,7 @@
 infrastructureDefinition:
   name: infra_remote122
   identifier: infra_remote122
+  description: dfrg
   orgIdentifier: default
   projectIdentifier: TestInfraGitx
   environmentRef: env1

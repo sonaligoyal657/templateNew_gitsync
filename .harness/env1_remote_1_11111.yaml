@@ -1,0 +1,7 @@
+environment:
+  name: env1_remote_1_11111
+  identifier: env1_remote_1_11111
+  accountId: qZ4zuEEHRrO7qGV_RtDYxg
+  orgIdentifier: default
+  projectIdentifier: testInfrastructure
+  type: PreProduction

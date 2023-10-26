@@ -1,7 +1,21 @@
 environment:
   name: env1_remote_1_11111
   identifier: env1_remote_1_11111
-  accountId: qZ4zuEEHRrO7qGV_RtDYxg
+  type: PreProduction
   orgIdentifier: default
   projectIdentifier: testInfrastructure
-  type: PreProduction
+  overrides:
+    manifests:
+      - manifest:
+          identifier: gfdsa
+          type: Values
+          spec:
+            store:
+              type: Git
+              spec:
+                connectorRef: <+input>
+                gitFetchType: Branch
+                paths:
+                  - hgfd
+                repoName: gfdshgfdsa
+                branch: <+input>

@@ -26,6 +26,7 @@ template:
                             type: Email
                             spec:
                               to: <+input>
+                              cc: <+input>
                               body: <+input>
       - stage:
           name: sdrty
@@ -45,6 +46,7 @@ template:
                             type: Email
                             spec:
                               to: <+input>
+                              cc: <+input>
                               body: <+input>
       - stage:
           name: STG2_DS
@@ -64,5 +66,6 @@ template:
                             type: Email
                             spec:
                               to: <+input>
+                              cc: <+input>
                               body: <+input>
   description: testtemplatedescription12

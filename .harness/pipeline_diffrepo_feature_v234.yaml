@@ -1,0 +1,39 @@
+template:
+  name: pipeline_diffrepo_feature
+  identifier: pipeline_diffrepo_feature
+  type: Pipeline
+  projectIdentifier: Jira
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: stg1
+          identifier: stg1
+          template:
+            templateRef: stageTemplate_diffRepo_feature
+            versionLabel: v9879
+            templateInputs:
+              type: Deployment
+              spec:
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                execution:
+                  steps:
+                    - step:
+                        identifier: step1_feature_samerepo
+                        template:
+                          templateInputs:
+                            type: ShellScriptProvision
+                            spec:
+                              source:
+                                type: Inline
+                                spec:
+                                  script: <+input>
+  versionLabel: v234

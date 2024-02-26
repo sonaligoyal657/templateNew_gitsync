@@ -1,0 +1,22 @@
+inputSet:
+  name: ip1_test
+  identifier: ip1_test
+  orgIdentifier: default
+  projectIdentifier: Jira
+  pipeline:
+    identifier: test2_pipeline
+    template:
+      templateInputs:
+        stages:
+          - stage:
+              identifier: stg1
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: harness1
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>.executionInput()

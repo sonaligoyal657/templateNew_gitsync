@@ -28,20 +28,6 @@ template:
               spec:
                 skipDryRun: false
                 pruningEnabled: false
-          - step:
-              name: step1_feature_samerepo
-              identifier: step1_feature_samerepo
-              template:
-                templateRef: tgrf
-                versionLabel: fg
-                gitBranch: feature1
-                templateInputs:
-                  type: ShellScriptProvision
-                  spec:
-                    source:
-                      type: Inline
-                      spec:
-                        script: <+input>
         rollbackSteps:
           - step:
               name: Rollback Rollout Deployment

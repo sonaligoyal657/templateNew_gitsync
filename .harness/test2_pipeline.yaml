@@ -1,10 +1,11 @@
 pipeline:
   name: test2_pipeline
   identifier: test2_pipeline
+  tags: {}
   template:
     templateRef: pipelineTemplateNBug
     versionLabel: vbn
-    gitBranch: master
+    gitBranch: master-patch-1
     templateInputs:
       stages:
         - stage:
@@ -19,6 +20,5 @@ pipeline:
                       spec:
                         approvers:
                           userGroups: <+input>
-  tags: {}
   projectIdentifier: Jira
   orgIdentifier: default

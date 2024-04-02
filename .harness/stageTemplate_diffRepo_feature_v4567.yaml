@@ -24,7 +24,7 @@ template:
               name: Rollout Deployment
               identifier: rolloutDeployment
               type: K8sRollingDeploy
-              timeout: 15m
+              timeout: <+input>
               spec:
                 skipDryRun: false
                 pruningEnabled: false

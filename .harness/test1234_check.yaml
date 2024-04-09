@@ -1,5 +1,5 @@
 infrastructureDefinition:
-  name: test1234_check
+  name: test1234_check_12
   identifier: test1234_check
   orgIdentifier: default
   projectIdentifier: Jira

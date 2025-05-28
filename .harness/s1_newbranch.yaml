@@ -20,4 +20,15 @@ service:
                   branch: s
               skipResourceVersioning: false
               enableDeclarativeRollback: false
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: account.dockerhubtestrunner
+                imagePath: <+input>
+                tag: <+input>
+                digest: ""
+              identifier: a1
+              type: DockerRegistry
     type: Kubernetes

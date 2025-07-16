@@ -8,32 +8,11 @@ template:
   spec:
     stages:
       - stage:
-          name: stg1
-          identifier: stg1
+          name: stg2_diffrepo_featurebranch
+          identifier: stg2_diffrepo_featurebranch
+          tags: {}
           template:
-            templateRef: stageTemplate_diffRepo_feature
-            versionLabel: v9879
-            templateInputs:
-              type: Deployment
-              spec:
-                service:
-                  serviceRef: <+input>
-                  serviceInputs: <+input>
-                environment:
-                  environmentRef: <+input>
-                  environmentInputs: <+input>
-                  serviceOverrideInputs: <+input>
-                  infrastructureDefinitions: <+input>
-                execution:
-                  steps:
-                    - step:
-                        identifier: step1_feature_samerepo
-                        template:
-                          templateInputs:
-                            type: ShellScriptProvision
-                            spec:
-                              source:
-                                type: Inline
-                                spec:
-                                  script: <+input>
+            templateRef: stgtemplate_same
+            versionLabel: v1
+            gitBranch: abc-feature-patch
   versionLabel: v234

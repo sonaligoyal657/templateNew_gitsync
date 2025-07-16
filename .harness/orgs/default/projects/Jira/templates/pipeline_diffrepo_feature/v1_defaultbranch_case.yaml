@@ -1,0 +1,26 @@
+template:
+  name: pipeline_diffrepo_feature
+  identifier: pipeline_diffrepo_feature
+  type: Pipeline
+  projectIdentifier: Jira
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: stg2_diffrepo_featurebranch
+          identifier: stg2_diffrepo_featurebranch
+          tags: {}
+          template:
+            templateRef: stgtemplate_same
+            versionLabel: v1
+            gitBranch: abc-feature-patch
+      - stage:
+          name: stg2_difrepo_defaultbranch
+          identifier: stg2_difrepo_defaultbranch
+          tags: {}
+          template:
+            templateRef: stgtemplate_same
+            versionLabel: v1_defaultbranch
+            gitBranch: main
+  versionLabel: v1_defaultbranch_case

@@ -15,5 +15,5 @@ pipeline:
       steps:
         - name: step1
           run:
-            script: <+input>
+            script: echo 'hello'
           id: step1

@@ -1,0 +1,19 @@
+pipeline:
+  stages:
+    - name: Deploy Kubernetes_2e5c
+      id: Deploy_Kubernetes_2e5c
+      service:
+        type: kubernetes
+        items: <+input>
+      environment:
+        items: <+input>
+      runtime: delegate
+      on-failure:
+        - errors:
+            - all
+          action: stage-rollback
+      steps:
+        - name: step1
+          run:
+            script: <+input>
+          id: step1
